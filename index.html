@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Clean Machine Glasgow | Mobile Car Detailing & Exterior Pressure Washing</title>
+    <meta name="description" content="Premier mobile car detailing, valeting, and exterior pressure washing service in Glasgow & surrounding areas. We come to your home or workplace!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&family=Satisfy&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Announcement Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-item primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                <span>Glasgow & Surrounding Areas — Mobile Service We Come To You!</span>
+            </div>
+            <div class="top-bar-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:07375504704" style="color: var(--text-white); font-weight: 700;">07375504704</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Glassmorphism Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="brand-logo">
+                <div class="brand-icon-box">
+                    <img src="assets/logo.jpg" alt="The Clean Machine Logo">
+                </div>
+                <div class="brand-text-wrap">
+                    <span class="brand-name">The Clean <span>Machine</span></span>
+                    <span class="brand-sub">Glasgow • Detailing & Washing</span>
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Who We Are</a>
+                <a href="#why-us" class="nav-link">Why Choose Us</a>
+                <a href="#pricing" class="nav-link">Packages</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#booking" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/447375504704" target="_blank" class="pill-btn pill-btn-blue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span>WhatsApp Us</span>
+                </a>
+                
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mob-drawer-overlay" id="mobDrawerOverlay"></div>
+    <div class="mob-drawer" id="mobDrawer">
+        <div class="mob-nav-list">
+            <a href="#home" class="mob-nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Home
+            </a>
+            <a href="#about" class="mob-nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                Who We Are
+            </a>
+            <a href="#why-us" class="mob-nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Why Choose Us
+            </a>
+            <a href="#pricing" class="mob-nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Valet Packages
+            </a>
+            <a href="#gallery" class="mob-nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Our Gallery
+            </a>
+            <a href="#booking" class="mob-nav-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Contact & Booking
+            </a>
+        </div>
+        
+        <div class="mob-drawer-footer">
+            <a href="tel:07375504704" class="pill-btn pill-btn-cyan" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call 07375504704
+            </a>
+        </div>
+    </div>
+
+    <!-- PATTERN 1: HIGH-IMPACT SPLIT HERO -->
+    <section class="hero-section" id="home">
+        <div class="hero-bg-media">
+            <img src="assets/hero.jpg" alt="Luxury car detailing split hero background">
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-split-flex">
+                <!-- Left Column -->
+                <div class="hero-left-col">
+                    <span class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Glasgow's #1 Mobile Specialist
+                    </span>
+                    <span class="hero-script-tag">Clean Today. Protect Tomorrow.</span>
+                    <h1 class="hero-h1">
+                        ULTIMATE CLEAN. <br>
+                        <strong>UNMATCHED CONVENIENCE.</strong>
+                    </h1>
+                    <p class="hero-lead">
+                        We bring professional mobile car detailing, valeting, and pressure washing directly to your home or workplace across Glasgow.
+                    </p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="#booking" class="pill-btn pill-btn-cyan">
+                            <span>Book Your Slot Now</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#pricing" class="pill-btn pill-btn-outline">
+                            <span>Explore Packages</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Glowing Feature Badges -->
+                <div class="hero-right-col">
+                    <div class="hero-features-box">
+                        <h3 class="hero-features-title">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue-glow)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            The Clean Machine Promise
+                        </h3>
+                        <div class="hero-check-list">
+                            <div class="hero-check-item">
+                                <div class="hero-check-icon">✓</div>
+                                <div class="hero-check-text">
+                                    <h4>100% Mobile Service</h4>
+                                    <p>We bring our own equipment & water directly to your location.</p>
+                                </div>
+                            </div>
+                            <div class="hero-check-item">
+                                <div class="hero-check-icon">✓</div>
+                                <div class="hero-check-text">
+                                    <h4>Safe Hand Wash & Paint Care</h4>
+                                    <p>pH-neutral snow foams & scratch-free microfibre washing.</p>
+                                </div>
+                            </div>
+                            <div class="hero-check-item">
+                                <div class="hero-check-icon">✓</div>
+                                <div class="hero-check-text">
+                                    <h4>Deep Interior Shampooing</h4>
+                                    <p>Eliminate stubborn stains, odors & dust with deep extraction.</p>
+                                </div>
+                            </div>
+                            <div class="hero-check-item">
+                                <div class="hero-check-icon">✓</div>
+                                <div class="hero-check-text">
+                                    <h4>Pressure Washing Restorations</h4>
+                                    <p>Revitalise driveways, patios, walls, and exterior surfaces.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-flex">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <div class="trust-text">
+                        <h5>100% Mobile Van</h5>
+                        <p>Home, Office or Anywhere</p>
+                    </div>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="trust-text">
+                        <h5>5-Star Satisfaction</h5>
+                        <p>Glasgow & Surrounding Areas</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div class="trust-text">
+                        <h5>Premium Products</h5>
+                        <p>Safe pH-Neutral Formula</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="trust-text">
+                        <h5>Flexible Booking</h5>
+                        <p>Fast WhatsApp Response</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATTERN 2: "WHO WE ARE ?" (2-COLUMN FEATURE SPLIT) -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="who-we-are-grid">
+                <!-- Left Column -->
+                <div class="who-text-col">
+                    <span class="section-tag">WHO WE ARE ?</span>
+                    <h2 class="section-title">
+                        GLASGOW'S TRUSTED <br>
+                        <strong>MOBILE DETAILING SPECIALISTS</strong>
+                    </h2>
+                    <p class="lead-p">
+                        Looking for a reliable mobile car detailing & exterior cleaning service in Glasgow? You've found us!
+                    </p>
+                    <p>
+                        At <strong>The Clean Machine Glasgow</strong>, we believe maintaining your vehicle or property shouldn't consume your precious time. We bring commercial-grade power washers, snow foam lances, and specialized extraction machinery directly to your door.
+                    </p>
+                    <p>
+                        Whether your car needs a quick exterior refresh, a deep interior shampoo, or your driveway requires high-pressure restoration, we treat every job with meticulous care.
+                    </p>
+
+                    <div class="who-stats-row">
+                        <div class="stat-card">
+                            <div class="stat-num">100%</div>
+                            <div class="stat-label">Mobile Fleet</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">4</div>
+                            <div class="stat-label">Valet Tiers</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">5★</div>
+                            <div class="stat-label">Client Reviews</div>
+                        </div>
+                    </div>
+
+                    <a href="#booking" class="pill-btn pill-btn-blue">
+                        <span>Book Your Mobile Slot</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+
+                <!-- Right Column: High-Res Action Photo -->
+                <div class="who-photo-col">
+                    <div class="img-box who-photo-box">
+                        <img src="assets/specialist.jpg" alt="The Clean Machine Mobile Detailing Specialist in Glasgow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATTERN 3: "WHY CHOOSE US" CHECKMARK GRID -->
+    <section class="section-padding why-section" id="why-us">
+        <div class="container">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                <span class="section-tag">THE CLEAN MACHINE ADVANTAGE</span>
+                <h2 class="section-title">Why Glasgow Drivers & Homeowners <strong>Choose Us</strong></h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon-bubble">✓</div>
+                    <div class="why-card-content">
+                        <h3>100% Mobile — We Come To You!</h3>
+                        <p>No waiting in dirty car wash queues. We arrive at your home, workplace, or preferred location with all equipment ready.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-bubble">✓</div>
+                    <div class="why-card-content">
+                        <h3>Safe pH-Neutral Snow Foam & Products</h3>
+                        <p>We use top-tier, scratch-free chemical formulas safe for ceramic coatings, expensive paintwork, and delicate interior leather.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-bubble">✓</div>
+                    <div class="why-card-content">
+                        <h3>Comprehensive Interior & Exterior Care</h3>
+                        <p>From mini valets and full seat extraction to pressure washing driveways, patios, walls, and windows across Glasgow.</p>
+                    </div>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-bubble">✓</div>
+                    <div class="why-card-content">
+                        <h3>Transparent Upfront Package Rates</h3>
+                        <p>Clear pricing tiers starting from just £20 with no hidden surprises or inflated quotes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATTERN 4: VERTICAL TABLE PRICING CARDS & DISCLAIMER BLOCK -->
+    <section class="section-padding pricing-section" id="pricing">
+        <div class="container">
+            <div class="pricing-header-wrap">
+                <span class="section-tag">OUR DETAILING PACKAGES</span>
+                <h2 class="section-title">Choose Your Level Of <strong>Clean & Shine</strong></h2>
+                <p style="color: var(--text-silver);">Select from our 4 tailored mobile valeting tiers designed for every vehicle and budget.</p>
+            </div>
+
+            <div class="table-pricing-grid">
+                <!-- BRONZE PACKAGE -->
+                <div class="pricing-card">
+                    <div class="pricing-card-head">
+                        <div class="tpc-name">BRONZE</div>
+                        <div class="tpc-sub">Standard Exterior Wash</div>
+                        <div class="tpc-price-wrap">
+                            <span class="tpc-from">FROM</span>
+                            <span class="tpc-price">£20</span>
+                        </div>
+                    </div>
+                    <div class="pricing-bullets">
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Exterior car wash (Safe hand wash & rinse)</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Wheels & alloys cleaned (Brake dust removed)</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Hand dried on all packages</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <button class="pill-btn pill-btn-outline select-package-btn" data-package="Bronze (From £20)" style="width: 100%;">
+                            Select Bronze
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SILVER PACKAGE -->
+                <div class="pricing-card">
+                    <div class="pricing-card-head">
+                        <div class="tpc-name">SILVER</div>
+                        <div class="tpc-sub">Mini Valet Refresh</div>
+                        <div class="tpc-price-wrap">
+                            <span class="tpc-from">FROM</span>
+                            <span class="tpc-price">£50</span>
+                        </div>
+                    </div>
+                    <div class="pricing-bullets">
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Everything in Bronze</strong></span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Interior vacuum & door shuts cleaned</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Interior surfaces wiped down</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Dashboard & centre console cleaned</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Air vents & windows cleaned inside & out</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Light interior fragrance finish</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <button class="pill-btn pill-btn-outline select-package-btn" data-package="Silver (From £50)" style="width: 100%;">
+                            Select Silver
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GOLD PACKAGE (FEATURED) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <div class="pricing-card-head">
+                        <div class="tpc-name">GOLD</div>
+                        <div class="tpc-sub">Full Valet Restoration</div>
+                        <div class="tpc-price-wrap">
+                            <span class="tpc-from">FROM</span>
+                            <span class="tpc-price">£100</span>
+                        </div>
+                    </div>
+                    <div class="pricing-bullets">
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Everything in Silver</strong></span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Pre-wash & snow foam lance treatment</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Wheels & arches deep cleaned + tyres dressed</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>All door shuts & sills cleaned + trim dressed</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Full interior vacuum, seats & carpets shampooed</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <button class="pill-btn pill-btn-cyan select-package-btn" data-package="Gold (From £100)" style="width: 100%;">
+                            Select Gold
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PLATINUM PACKAGE -->
+                <div class="pricing-card">
+                    <div class="pricing-badge" style="background: linear-gradient(90deg, #A855F7, #EC4899); color: white;">VIP ANNUAL</div>
+                    <div class="pricing-card-head">
+                        <div class="tpc-name">PLATINUM</div>
+                        <div class="tpc-sub">Premium Deep Clean Valet</div>
+                        <div class="tpc-price-wrap">
+                            <span class="tpc-from">FROM</span>
+                            <span class="tpc-price">£140</span>
+                        </div>
+                    </div>
+                    <div class="pricing-bullets">
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><strong>Everything in Gold</strong></span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Exterior wash with paint decontamination</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Wheels, arches & wheel barrels deep cleaned</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Tyres, trim & seals thoroughly cleaned & protected</span>
+                        </div>
+                        <div class="pricing-bullet-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Boot area deep cleaned + full shampoo extraction</span>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <button class="pill-btn pill-btn-outline select-package-btn" data-package="Platinum (From £140)" style="width: 100%;">
+                            Select Platinum
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MANDATORY OFFICIAL DISCLAIMER BLOCK -->
+            <div class="disclaimer-block">
+                <div class="disclaimer-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="disclaimer-text">
+                    <h4>PLEASE NOTE:</h4>
+                    <p>*Prices listed are starting rates and may vary depending on the condition and size of your vehicle (e.g. 4x4, SUV, commercial van, or heavily soiled interiors). Contact us directly for a exact instant quote.*</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL PHOTO GALLERY GRID -->
+    <section class="section-padding gallery-section" id="gallery">
+        <div class="container">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                <span class="section-tag">REAL RESULTS</span>
+                <h2 class="section-title">Our Recent Work In <strong>Glasgow</strong></h2>
+                <p style="color: var(--text-silver);">100% genuine photos from mobile detailing & pressure washing bookings.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card img-box">
+                    <img src="assets/gallery_snowfoam.jpg" alt="Safe pH-neutral snow foam pre-wash on car bodywork">
+                    <div class="gallery-caption">
+                        <h4>Snow Foam Pre-Wash</h4>
+                        <p>Safe pH-Neutral Bodywork Rinsing</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card img-box">
+                    <img src="assets/gallery_interior.jpg" alt="Professional car interior vacuuming and console detailing">
+                    <div class="gallery-caption">
+                        <h4>Interior Vacuum & Valeting</h4>
+                        <p>Deep Floor & Dashboard Clean</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card img-box">
+                    <img src="assets/gallery_pressure_washing.jpg" alt="Driveway and patio high pressure power washing">
+                    <div class="gallery-caption">
+                        <h4>Driveway Pressure Washing</h4>
+                        <p>Block Paving & Moss Removal</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card img-box">
+                    <img src="assets/gallery_wheels.jpg" alt="Alloy wheel deep cleaning and brake dust removal">
+                    <div class="gallery-caption">
+                        <h4>Alloy Wheel Deep Clean</h4>
+                        <p>Brake Dust & Rim Scrubbing</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card img-box">
+                    <img src="assets/gallery_seat_shampoo.jpg" alt="Car seat upholstery shampooing with wet extractor machine">
+                    <div class="gallery-caption">
+                        <h4>Interior Seat Shampooing</h4>
+                        <p>Deep Wet Extraction</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card img-box">
+                    <img src="assets/gallery_paint_finish.jpg" alt="Paintwork decontamination microfibre polish gloss shine">
+                    <div class="gallery-caption">
+                        <h4>Decontamination & Polish</h4>
+                        <p>Mirror Paint Reflection Finish</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATTERN 5: HIGH-IMPACT CTA BANNER + 3-ICON FEATURE BAR -->
+    <section class="cta-banner-section">
+        <div class="container">
+            <div class="cta-banner-card">
+                <div class="cta-banner-grid">
+                    <div class="cta-banner-left">
+                        <h2 class="cta-banner-title">
+                            READY FOR A SHOWROOM FINISH <br>
+                            <strong>AT YOUR DOORSTEP?</strong>
+                        </h2>
+                        <p class="cta-banner-desc">
+                            Don't waste your weekend washing the car or driveway. Book a mobile slot with Glasgow's top detailing specialists now.
+                        </p>
+                        <div class="cta-banner-actions">
+                            <a href="https://wa.me/447375504704" target="_blank" class="pill-btn pill-btn-cyan">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                <span>WhatsApp Direct Booking</span>
+                            </a>
+                            <a href="tel:07375504704" class="pill-btn pill-btn-outline">
+                                <span>Call 07375504704</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-Icon Feature Bar Footer -->
+                <div class="three-icon-bar">
+                    <div class="three-icon-item">
+                        <div class="three-icon-symbol">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="three-icon-text">
+                            <h4>Heightened Care</h4>
+                            <p>Scratch-Free Microfibre Technique</p>
+                        </div>
+                    </div>
+
+                    <div class="three-icon-item">
+                        <div class="three-icon-symbol">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <div class="three-icon-text">
+                            <h4>Mobile Fleet</h4>
+                            <p>Fully Equipped Water & Power</p>
+                        </div>
+                    </div>
+
+                    <div class="three-icon-item">
+                        <div class="three-icon-symbol">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="three-icon-text">
+                            <h4>Satisfaction Guarantee</h4>
+                            <p>Quality Inspected Every Time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING FORM -->
+    <section class="section-padding contact-section" id="booking">
+        <div class="container">
+            <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Book Or Enquire <strong>Today</strong></h2>
+                <p style="color: var(--text-silver);">Fill out the quick form below to launch an instant WhatsApp quote request.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info Box -->
+                <div class="contact-info-box">
+                    <h3>Contact Information</h3>
+                    <p style="color: var(--text-silver); margin-top: 0.5rem;">Have questions about our detailing or pressure washing services? Reach out directly!</p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Phone / WhatsApp</h4>
+                                <a href="tel:07375504704">07375504704</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Service Area</h4>
+                                <p>Glasgow & Surrounding Areas</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Instagram & TikTok</h4>
+                                <p>@thecleanmachine_glasgow</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(0, 102, 255, 0.1); border-radius: var(--radius-md); border: 1px solid var(--blue-border);">
+                        <p style="font-size: 0.85rem; color: var(--blue-glow); font-weight: 600;">
+                            ⚡ Rapid Booking: Message us on WhatsApp with your vehicle model and postcode for an instant time slot!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form Box -->
+                <div class="contact-form-box">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label class="form-label" for="formName">Your Full Name</label>
+                            <input type="text" id="formName" class="form-control" placeholder="e.g. James Smith" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="formPhone">Phone Number</label>
+                            <input type="tel" id="formPhone" class="form-control" placeholder="e.g. 07123 456789" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="formArea">Postcode / Area in Glasgow</label>
+                            <input type="text" id="formArea" class="form-control" placeholder="e.g. G12, West End, Bearsden" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="packageSelect">Select Service Package</label>
+                            <select id="packageSelect" class="form-control" required>
+                                <option value="Bronze (From £20)">Bronze Package (Exterior Wash From £20)</option>
+                                <option value="Silver (From £50)">Silver Package (Mini Valet From £50)</option>
+                                <option value="Gold (From £100)" selected>Gold Package (Full Valet From £100)</option>
+                                <option value="Platinum (From £140)">Platinum Package (VIP Deep Clean From £140)</option>
+                                <option value="Exterior Pressure Washing">Exterior Pressure Washing (Driveway/Patio Quote)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="formVehicle">Vehicle Make & Model</label>
+                            <select id="formVehicle" class="form-control" required>
+                                <option value="Hatchback / Small Car">Hatchback / Small Car</option>
+                                <option value="Saloon / Estate / Coupe" selected>Saloon / Estate / Coupe</option>
+                                <option value="4x4 / Large SUV / Crossover">4x4 / Large SUV / Crossover</option>
+                                <option value="Commercial Van / Work Vehicle">Commercial Van / Work Vehicle</option>
+                                <option value="N/A (Pressure Washing Only)">N/A (Exterior Property Cleaning)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="formNotes">Special Requests / Vehicle Condition</label>
+                            <textarea id="formNotes" class="form-control" rows="3" placeholder="Tell us if pet hair extraction, heavy dirt, or driveway pressure washing is needed..."></textarea>
+                        </div>
+
+                        <button type="submit" class="pill-btn pill-btn-cyan" style="width: 100%; font-size: 1rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            <span>Send Booking Request via WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="brand-logo">
+                        <div class="brand-icon-box">
+                            <img src="assets/logo.jpg" alt="The Clean Machine Logo">
+                        </div>
+                        <div class="brand-text-wrap">
+                            <span class="brand-name">The Clean <span>Machine</span></span>
+                            <span class="brand-sub">Glasgow</span>
+                        </div>
+                    </a>
+                    <p class="footer-col-desc">
+                        Glasgow's premier mobile car detailing and high-pressure exterior washing service. We bring luxury care directly to your doorstep.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/thecleanmachine_glasgow/" target="_blank" class="social-btn" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@thecleanmachine_glasgow" target="_blank" class="social-btn" aria-label="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">Who We Are</a>
+                        <a href="#why-us">Why Choose Us</a>
+                        <a href="#pricing">Valet Packages</a>
+                        <a href="#gallery">Recent Work</a>
+                        <a href="#booking">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <div class="footer-links">
+                        <a href="#pricing">Bronze Exterior Wash</a>
+                        <a href="#pricing">Silver Mini Valet</a>
+                        <a href="#pricing">Gold Full Valet</a>
+                        <a href="#pricing">Platinum Deep Clean</a>
+                        <a href="#gallery">Driveway Pressure Washing</a>
+                        <a href="#gallery">Patio & Wall Cleaning</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Mobile Area</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-silver); margin-bottom: 1rem;">
+                        We serve all of <strong>Glasgow</strong>, West End, Bearsden, Milngavie, Newton Mearns, Giffnock, Paisley, and surrounding areas.
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--blue-glow); font-weight: 700;">
+                        📞 Call: 07375504704
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Clean Machine Glasgow. All rights reserved.</p>
+                <p>Designed with Anti-AI-Slop & High-Conversion Luxury Spec</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
