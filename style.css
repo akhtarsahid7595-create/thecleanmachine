@@ -604,23 +604,34 @@ img {
 }
 
 .trust-flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
 }
 
 .trust-item {
     display: flex;
     align-items: center;
     gap: 0.85rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.1rem;
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    box-sizing: border-box;
+}
+
+.trust-item:hover {
+    border-color: var(--blue-border);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.15);
 }
 
 .trust-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
     border-radius: var(--radius-md);
     background: rgba(0, 102, 255, 0.12);
     border: 1px solid var(--blue-border);
@@ -633,11 +644,14 @@ img {
 .trust-text h5 {
     font-size: 0.95rem;
     font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
 }
 
 .trust-text p {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-silver);
+    line-height: 1.2;
 }
 
 /* ==========================================================================
@@ -1524,6 +1538,11 @@ select.form-control option {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .trust-flex {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1636,6 +1655,32 @@ select.form-control option {
         text-align: center;
         padding: 1.25rem 1rem;
         gap: 1rem;
+    }
+
+    .trust-flex {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .trust-item {
+        padding: 0.75rem 0.6rem;
+        gap: 0.6rem;
+    }
+
+    .trust-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .trust-text h5 {
+        font-size: 0.8rem;
+        line-height: 1.15;
+    }
+
+    .trust-text p {
+        font-size: 0.68rem;
+        line-height: 1.15;
     }
 
     /* Card Mobile Padding & Bounds */
