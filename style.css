@@ -104,13 +104,13 @@ img {
 
 /* Announcement Top Bar */
 .top-bar {
-    background: linear-gradient(90deg, #0044B3 0%, var(--blue-electric) 50%, #0044B3 100%);
-    color: var(--text-white);
-    font-size: 0.85rem;
+    background: linear-gradient(90deg, #070B12 0%, #0E1726 50%, #070B12 100%);
+    color: var(--text-silver);
+    font-size: 0.82rem;
     font-weight: 600;
     padding: 0.5rem 0;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--blue-border);
     width: 100%;
 }
 
@@ -132,14 +132,14 @@ img {
     min-width: 16px;
 }
 
-/* Sticky Header */
+/* Sticky Glassmorphism Header */
 .site-header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: rgba(11, 15, 23, 0.94);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background-color: rgba(11, 15, 23, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: var(--transition);
@@ -149,8 +149,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    gap: 1rem;
+    height: 76px;
+    gap: 1.25rem;
 }
 
 /* Text-Based Luxury Branding */
@@ -159,7 +159,7 @@ img {
     align-items: center;
     gap: 0.75rem;
     text-decoration: none;
-    min-width: 0;
+    flex-shrink: 0;
 }
 
 .brand-icon-box {
@@ -178,27 +178,24 @@ img {
 .brand-icon-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: var(--radius-md);
 }
 
 .brand-text-wrap {
     display: flex;
     flex-direction: column;
-    min-width: 0;
 }
 
 .brand-name {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     color: var(--text-white);
     line-height: 1.1;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .brand-name span {
@@ -206,31 +203,29 @@ img {
 }
 
 .brand-sub {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-silver);
+    letter-spacing: 0.12em;
+    color: var(--blue-glow);
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /* Desktop Navigation */
 .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
+    gap: 1.1rem;
 }
 
 .nav-link {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-silver);
     transition: var(--transition);
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     white-space: nowrap;
 }
 
@@ -256,7 +251,18 @@ img {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.header-actions .pill-btn {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.82rem;
+    height: 40px;
+    border-radius: var(--radius-pill);
+    box-sizing: border-box;
 }
 
 /* Button Component System */
@@ -719,17 +725,24 @@ img {
 }
 
 .who-photo-box {
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     border: 2px solid var(--blue-electric);
     box-shadow: var(--shadow-glow);
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
     width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .who-photo-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
+    border-radius: var(--radius-xl);
     image-rendering: -webkit-optimize-contrast;
     transition: transform 0.5s ease;
 }
@@ -1084,7 +1097,7 @@ img {
 .gallery-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     image-rendering: -webkit-optimize-contrast;
     transition: transform 0.5s ease;
 }
@@ -1165,42 +1178,14 @@ img {
 .ba-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
     image-rendering: -webkit-optimize-contrast;
 }
 
-.ba-badge-before {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(11, 15, 23, 0.9);
-    color: #FF5555;
-    font-weight: 800;
-    font-size: 0.85rem;
-    padding: 0.4rem 1.1rem;
-    border-radius: var(--radius-pill);
-    border: 1px solid rgba(255, 85, 85, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    backdrop-filter: blur(6px);
-    z-index: 5;
-}
-
+.ba-badge-before,
 .ba-badge-after {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: linear-gradient(135deg, var(--blue-glow), var(--blue-electric));
-    color: #050B14;
-    font-weight: 900;
-    font-size: 0.85rem;
-    padding: 0.4rem 1.1rem;
-    border-radius: var(--radius-pill);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    box-shadow: var(--shadow-cyan);
-    z-index: 5;
+    display: none !important;
 }
 
 /* ==========================================================================
@@ -1511,7 +1496,7 @@ select.form-control option {
 /* ==========================================================================
    STRICT MULTI-DEVICE RESPONSIVE BREAKPOINTS (320px to 1024px)
    ========================================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
     .desktop-nav {
         display: none;
     }
