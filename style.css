@@ -970,6 +970,95 @@ img {
 }
 
 /* ==========================================================================
+   PAINT CORRECTION & CERAMIC COATING SECTION
+   ========================================================================== */
+.paint-correction-section {
+    background-color: var(--bg-surface);
+}
+
+.paint-stages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.paint-specials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.paint-special-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.paint-special-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--blue-border);
+    box-shadow: 0 12px 30px rgba(0, 102, 255, 0.2);
+}
+
+.paint-special-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background: rgba(0, 102, 255, 0.15);
+    border: 1px solid var(--blue-border);
+    color: var(--blue-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.workshop-notice-block {
+    margin-top: 3.5rem;
+    background: rgba(0, 102, 255, 0.08);
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+.workshop-notice-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--blue-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workshop-notice-text h4 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--blue-glow);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.workshop-notice-text p {
+    font-size: 0.88rem;
+    color: var(--text-silver);
+}
+
+/* ==========================================================================
    GALLERY GRID (1024px+ Real Photos)
    ========================================================================== */
 .gallery-section {
@@ -1460,12 +1549,21 @@ select.form-control option {
 
     /* Grid Collapse */
     .table-pricing-grid,
+    .paint-stages-grid,
+    .paint-specials-grid,
     .gallery-grid,
     .why-grid,
     .three-icon-bar,
     .who-stats-row {
         grid-template-columns: 1fr;
         gap: 1.25rem;
+    }
+
+    .workshop-notice-block {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem 1rem;
+        gap: 1rem;
     }
 
     /* Card Mobile Padding & Bounds */
