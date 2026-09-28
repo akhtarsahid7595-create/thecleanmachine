@@ -3,6 +3,11 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === '#booking') {
+        window.location.replace('contact.html');
+        return;
+    }
+
     // 1. Mobile Drawer Toggle
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobDrawer = document.getElementById('mobDrawer');
@@ -37,6 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mobDrawer.classList.contains('is-open')) {
                 toggleDrawer();
             }
+        });
+    });
+
+    // Keep every legacy booking link pointed at the dedicated contact page.
+    document.querySelectorAll('a[href$="#booking"]').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'contact.html';
         });
     });
 
