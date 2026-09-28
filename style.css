@@ -1748,6 +1748,196 @@ select.form-control option {
     }
 }
 
+/* Search-friendly service navigation shared by the homepage and service clusters. */
+.seo-service-strip {
+    padding: 4.5rem 0;
+    background: rgba(7, 16, 31, 0.82);
+    border-top: 1px solid var(--blue-border);
+    border-bottom: 1px solid var(--blue-border);
+}
+
+.seo-service-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.seo-service-links a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    min-height: 118px;
+    padding: 1.35rem;
+    color: var(--text-white);
+    text-decoration: none;
+    background: rgba(16, 31, 53, 0.72);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: var(--radius-md);
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.seo-service-links a:hover,
+.seo-service-links a:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--blue-glow);
+    background: rgba(16, 49, 82, 0.9);
+}
+
+.seo-service-links strong {
+    color: var(--text-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.seo-service-links span {
+    color: var(--text-silver);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.service-page {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    color: var(--text-white);
+}
+
+.service-hero {
+    padding: 8.5rem 0 5rem;
+    background: linear-gradient(115deg, rgba(4, 12, 24, 0.98), rgba(8, 31, 58, 0.9)), url('assets/hero.jpg') center / cover;
+    border-bottom: 1px solid var(--blue-border);
+}
+
+.service-hero .container {
+    max-width: 900px;
+}
+
+.service-hero h1 {
+    max-width: 780px;
+    margin: 0.8rem 0 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4.6rem);
+    line-height: 1.06;
+}
+
+.service-hero h1 strong,
+.service-section h2 strong {
+    color: var(--blue-glow);
+}
+
+.service-hero p {
+    max-width: 700px;
+    color: var(--text-silver);
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+.service-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+}
+
+.service-section {
+    padding: 5rem 0;
+}
+
+.service-section:nth-of-type(even) {
+    background: rgba(10, 25, 44, 0.55);
+}
+
+.service-section h2 {
+    max-width: 760px;
+    margin: 0.6rem 0 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.15;
+}
+
+.service-section > .container > p,
+.service-section > .container > .service-copy {
+    max-width: 780px;
+    color: var(--text-silver);
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+}
+
+.service-card {
+    padding: 1.5rem;
+    background: rgba(15, 34, 58, 0.78);
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-md);
+}
+
+.service-card h3 {
+    margin-bottom: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+}
+
+.service-card p,
+.service-card li {
+    color: var(--text-silver);
+    line-height: 1.65;
+}
+
+.service-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.service-faq {
+    max-width: 850px;
+    margin-top: 2rem;
+}
+
+.service-faq details {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--blue-border);
+}
+
+.service-faq summary {
+    cursor: pointer;
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.service-faq p {
+    margin: 0.8rem 0 0;
+    color: var(--text-silver);
+    line-height: 1.7;
+}
+
+.service-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 2rem;
+}
+
+.service-footer-links a {
+    color: var(--blue-glow);
+}
+
+@media (max-width: 800px) {
+    .seo-service-links,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-hero {
+        padding-top: 7rem;
+    }
+}
+
 /* Extra Small Mobile Devices (320px - 480px) */
 @media (max-width: 480px) {
     .container {
