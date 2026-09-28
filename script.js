@@ -45,6 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const servicesDropdown = document.querySelector('.nav-dropdown');
+    const servicesDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    if (servicesDropdown && servicesDropdownToggle) {
+        servicesDropdownToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isOpen = servicesDropdown.classList.toggle('is-open');
+            servicesDropdownToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!servicesDropdown.contains(event.target)) {
+                servicesDropdown.classList.remove('is-open');
+                servicesDropdownToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     // Keep every legacy booking link pointed at the dedicated contact page.
     document.querySelectorAll('a[href$="#booking"]').forEach(link => {
         link.addEventListener('click', (event) => {
