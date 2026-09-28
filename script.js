@@ -119,7 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameInput = document.getElementById('formName');
         const phoneInput = document.getElementById('formPhone');
         const submitButton = bookingForm.querySelector('button[type="submit"]');
-        submitButton.innerHTML = '<span>Send Request by Email & WhatsApp</span>';
+        submitButton.innerHTML = '<span>Send Booking Request</span>';
+        const contactInfoList = document.querySelector('.contact-info-list');
+        if (contactInfoList && !document.getElementById('businessEmail')) {
+            const emailItem = document.createElement('div');
+            emailItem.className = 'contact-info-item';
+            emailItem.id = 'businessEmail';
+            emailItem.innerHTML = '<div class="contact-info-text"><h4>Email</h4><a href="mailto:Thecleanmachine_glasgow@Outlook.com">Thecleanmachine_glasgow@Outlook.com</a></div>';
+            contactInfoList.appendChild(emailItem);
+        }
         const emailGroup = document.createElement('div');
         emailGroup.className = 'form-group';
         emailGroup.innerHTML = '<label class="form-label" for="formEmail">Email Address</label><input type="email" id="formEmail" name="email" class="form-control" placeholder="e.g. james@example.com" required>';
@@ -158,24 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const result = await response.json();
                 if (!result.success) throw new Error('Email submission failed');
 
-                const name = nameInput.value.trim();
-                const phone = phoneInput.value.trim();
-                const area = document.getElementById('formArea').value.trim();
-                const service = document.getElementById('packageSelect').value;
-                const vehicle = document.getElementById('formVehicle').value;
-                const notes = document.getElementById('formNotes').value.trim();
-                const email = document.getElementById('formEmail').value.trim();
-                const whatsappNumber = '447375504704';
-                let text = `*NEW BOOKING ENQUIRY - THE CLEAN MACHINE GLASGOW*\n\n`;
-                text += `*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Area/Postcode:* ${area}\n*Package Choice:* ${service}\n*Vehicle Type:* ${vehicle}\n`;
-                if (notes) text += `*Additional Notes:* ${notes}\n`;
-                text += `\n_Sent via website booking form_`;
-
                 const successMessage = document.createElement('p');
                 successMessage.className = 'form-success-message';
-                successMessage.textContent = 'Thank you. Your request has been sent. We will contact you shortly.';
+                successMessage.textContent = 'Thank you. Your booking request has been sent by email. We will contact you shortly.';
                 bookingForm.replaceWith(successMessage);
-                window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
             } catch (error) {
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalButtonText;
