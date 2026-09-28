@@ -44,6 +44,23 @@
     --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.form-success-message {
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid rgba(0, 220, 255, 0.35);
+    border-radius: var(--radius-md);
+    background: rgba(0, 220, 255, 0.08);
+    color: var(--blue-glow);
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-form-box button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
 /* Base Reset & Zero Overflow Guarantee */
 *, *::before, *::after {
     box-sizing: border-box;

@@ -113,36 +113,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. WhatsApp Direct Booking Trigger
+    // 4. Email and WhatsApp booking submission
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {
-        bookingForm.addEventListener('submit', (e) => {
+        const nameInput = document.getElementById('formName');
+        const phoneInput = document.getElementById('formPhone');
+        const submitButton = bookingForm.querySelector('button[type="submit"]');
+        submitButton.innerHTML = '<span>Send Request by Email & WhatsApp</span>';
+        const emailGroup = document.createElement('div');
+        emailGroup.className = 'form-group';
+        emailGroup.innerHTML = '<label class="form-label" for="formEmail">Email Address</label><input type="email" id="formEmail" name="email" class="form-control" placeholder="e.g. james@example.com" required>';
+        phoneInput.closest('.form-group').before(emailGroup);
+
+        const fields = {
+            access_key: 'c92a8e69-4ffd-4b0c-8f55-5277c392845b',
+            subject: 'New booking enquiry - The Clean Machine Glasgow',
+            from_name: 'The Clean Machine Glasgow Website'
+        };
+        Object.entries(fields).forEach(([name, value]) => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = name;
+            input.value = value;
+            bookingForm.appendChild(input);
+        });
+        nameInput.name = 'name';
+        phoneInput.name = 'phone';
+        document.getElementById('formArea').name = 'area';
+        document.getElementById('packageSelect').name = 'service';
+        document.getElementById('formVehicle').name = 'vehicle';
+        document.getElementById('formNotes').name = 'message';
+
+        bookingForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span>Sending request...</span>';
 
-            const name = document.getElementById('formName').value.trim();
-            const phone = document.getElementById('formPhone').value.trim();
-            const area = document.getElementById('formArea').value.trim();
-            const service = document.getElementById('packageSelect').value;
-            const vehicle = document.getElementById('formVehicle').value;
-            const notes = document.getElementById('formNotes').value.trim();
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: new FormData(bookingForm)
+                });
+                const result = await response.json();
+                if (!result.success) throw new Error('Email submission failed');
 
-            const whatsappNumber = '447375504704'; // 07375504704 international format
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const area = document.getElementById('formArea').value.trim();
+                const service = document.getElementById('packageSelect').value;
+                const vehicle = document.getElementById('formVehicle').value;
+                const notes = document.getElementById('formNotes').value.trim();
+                const email = document.getElementById('formEmail').value.trim();
+                const whatsappNumber = '447375504704';
+                let text = `*NEW BOOKING ENQUIRY - THE CLEAN MACHINE GLASGOW*\n\n`;
+                text += `*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Area/Postcode:* ${area}\n*Package Choice:* ${service}\n*Vehicle Type:* ${vehicle}\n`;
+                if (notes) text += `*Additional Notes:* ${notes}\n`;
+                text += `\n_Sent via website booking form_`;
 
-            let text = `*NEW BOOKING ENQUIRY - THE CLEAN MACHINE GLASGOW*\n\n`;
-            text += `👤 *Name:* ${name}\n`;
-            text += `📞 *Phone:* ${phone}\n`;
-            text += `📍 *Area/Postcode:* ${area}\n`;
-            text += `🧼 *Package Choice:* ${service}\n`;
-            text += `🚗 *Vehicle Type:* ${vehicle}\n`;
-            if (notes) {
-                text += `📝 *Additional Notes:* ${notes}\n`;
+                const successMessage = document.createElement('p');
+                successMessage.className = 'form-success-message';
+                successMessage.textContent = 'Thank you. Your request has been sent. We will contact you shortly.';
+                bookingForm.replaceWith(successMessage);
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+            } catch (error) {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+                alert('We could not send your request by email. Please try again or contact us on WhatsApp.');
             }
-            text += `\n_Sent via website demo booking form_`;
-
-            const encodedText = encodeURIComponent(text);
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-
-            window.open(whatsappUrl, '_blank');
         });
     }
 });
