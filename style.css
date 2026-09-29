@@ -2125,3 +2125,18 @@ select.form-control optgroup {
         font-size: 1.5rem;
     }
 }
+
+@media (max-width: 767px) {
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form-box {
+        order: 1;
+    }
+
+    .contact-info-box {
+        order: 2;
+    }
+}
